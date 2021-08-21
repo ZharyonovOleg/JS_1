@@ -48,18 +48,26 @@ if (a >= 0 && b >= 0) {
 
 let y = 9 // x уже есть
 
+/** функция сложения двух чисел
+*/
 function plus(x, y) {
     return x + y
 }
 
+/** функция вычитания двух чисел второго из первого
+*/
 function minus(x, y) {
     return x - y
 }
 
+/** функция произведения двух чисел
+*/
 function star(x, y) { // star :-))
     return x * y
 }
 
+/** функция частного двух чисел первое делится на второе
+*/
 function divide(x, y) {
     return x / y
 }
@@ -67,3 +75,25 @@ function divide(x, y) {
 
 // 5 задание:
 
+/**
+*/
+function mathOperation(operation, arg1, arg2) {
+    switch (operation) {
+        case "+":
+            return plus(arg1, arg2);
+        case "-":
+            return minus(arg1, arg2);
+        case "/":
+            return divide(arg1, arg2);
+        case "*":
+            return star(arg1, arg2);
+        default:
+            alert("Операция " + "'" + operation + "'" + " не предусмотрена");
+            break
+    }
+}
+let z = (mathOperation((prompt("Введите '+' для сложения,'-' для вычитания первого числа из второго, '/' для деления первого числа на второе и '*' для произведения введённых чисел")),
+    Number(prompt("Введите первое число отличное от нуля: ")),
+    Number(prompt("Введите второе число отличное от нуля: "))));
+
+alert("Ответ: " + z)
