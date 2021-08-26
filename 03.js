@@ -23,7 +23,35 @@ console.log("3 задание:  не понял products.forEach(price = price *
 
 const products = [{id: 3, price: 200}, {id: 4, price: 900}, {id: 1, price: 1000}];
 
-products.forEach(elem[price] = elem[price] * 0.85);
+products.forEach(elem => {  //пропустил момент со стрелочной функцией
+        elem.price = elem.price * 0.85
+});
 
 console.log(products);
 
+
+const products2 = [{id: 3, price: 200}, {id: 4, price: 900}, {id: 1, price: 1000}];
+
+products2.forEach(function (elem) {  // ВО! Допёр!!! :-)))
+        elem.price = elem.price * 0.85
+});
+
+console.log(products2);
+
+
+console.log("4 задание:");
+
+
+
+console.log("5 задание:");
+
+
+
+console.log("6 задание:");
+
+let x = 'x'
+
+for (let y = x; y.length < 21;) {
+        console.log(y);
+        y = x + y;
+}
