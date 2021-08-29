@@ -6,19 +6,45 @@
 </head>
 <body>
 <script>
+    'use strict'
+
+console.log("Задание 1.1:");
+
+function ProductEs5(name, price) {
+    this.name = name;
+    this.price = price;
+
+}
+
+ProductEs5.prototype.make25PercentDiscount = function() {
+    this.price = this.price * 0.75;
+    console.log("es5 " + this.price);
+}
+
+let obj1 = new ProductEs5("Apple", 400);
+obj1.make25PercentDiscount();
+
+    class ProductEs6 {
+        constructor(name, price) {
+            this.name = name;
+            this.price = price;
+        }
+
+        make25PercentDiscount() {
+            this.price = this.price * 0.75;
+            console.log("es6 " + this.price);;
+        }
+    }
+
+let obj2 = new ProductEs6("Apple", 400);
+        obj2.make25PercentDiscount();
+
+
+        
+console.log("Задание 1.2:");
 
 
 
-
-
-
-
-
-
-
-
-
-    
 </script>
 </body>
 </html>
